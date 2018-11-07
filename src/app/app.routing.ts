@@ -1,14 +1,23 @@
 import { Routes } from "@angular/router";
-import { GettingStartedComponent } from "./getting-started";
 import { LearnOpenshiftComponent } from "./learn-openshift/learn-openshift.component";
+import { SourceControlComponent } from "./source-control/source-control.component";
+import { OpenshiftComponent } from "./openshift/openshift.component";
 
 export const ROUTES: Routes = [
   {
     path: "docs",
     children: [
       {
-        path: "getting-started",
-        component: GettingStartedComponent
+        path: "gogs",
+        component: SourceControlComponent
+      },
+      {
+        path: "openshift",
+        component: OpenshiftComponent
+      },
+      {
+        path: "get-started",
+        component: SourceControlComponent
       },
       {
         path: "learn-openshift",
@@ -19,6 +28,6 @@ export const ROUTES: Routes = [
   {
     path: "",
     pathMatch: "full",
-    redirectTo: "/docs/getting-started"
+    redirectTo: "/docs/gogs"
   }
 ];
