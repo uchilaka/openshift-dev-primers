@@ -117,12 +117,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _source_control_source_control_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./source-control/source-control.component */ "./src/app/source-control/source-control.component.ts");
 /* harmony import */ var _openshift_openshift_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./openshift/openshift.component */ "./src/app/openshift/openshift.component.ts");
 /* harmony import */ var _other_tools_other_tools_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./other-tools/other-tools.component */ "./src/app/other-tools/other-tools.component.ts");
+/* harmony import */ var _o365_o365_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./o365/o365.component */ "./src/app/o365/o365.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -151,7 +153,8 @@ var AppModule = /** @class */ (function () {
                 _navbar_navbar_component__WEBPACK_IMPORTED_MODULE_11__["NavbarComponent"],
                 _source_control_source_control_component__WEBPACK_IMPORTED_MODULE_12__["SourceControlComponent"],
                 _openshift_openshift_component__WEBPACK_IMPORTED_MODULE_13__["OpenshiftComponent"],
-                _other_tools_other_tools_component__WEBPACK_IMPORTED_MODULE_14__["OtherToolsComponent"]
+                _other_tools_other_tools_component__WEBPACK_IMPORTED_MODULE_14__["OtherToolsComponent"],
+                _o365_o365_component__WEBPACK_IMPORTED_MODULE_15__["O365Component"]
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
@@ -186,6 +189,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _learn_openshift_learn_openshift_component__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./learn-openshift/learn-openshift.component */ "./src/app/learn-openshift/learn-openshift.component.ts");
 /* harmony import */ var _source_control_source_control_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./source-control/source-control.component */ "./src/app/source-control/source-control.component.ts");
 /* harmony import */ var _openshift_openshift_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./openshift/openshift.component */ "./src/app/openshift/openshift.component.ts");
+/* harmony import */ var _o365_o365_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./o365/o365.component */ "./src/app/o365/o365.component.ts");
+
 
 
 
@@ -193,6 +198,10 @@ var ROUTES = [
     {
         path: "docs",
         children: [
+            {
+                path: "o365",
+                component: _o365_o365_component__WEBPACK_IMPORTED_MODULE_3__["O365Component"]
+            },
             {
                 path: "gogs",
                 component: _source_control_source_control_component__WEBPACK_IMPORTED_MODULE_1__["SourceControlComponent"]
@@ -302,7 +311,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<nav class=\"navbar fixed-top navbar-expand-lg navbar-light bg-light\">\n  <a class=\"navbar-brand\" href=\"#/\">OpenShift Primer</a>\n  <button\n    class=\"navbar-toggler\"\n    type=\"button\"\n    data-toggle=\"collapse\"\n    data-target=\"#navbarSupportedContent\"\n    aria-controls=\"navbarSupportedContent\"\n    aria-expanded=\"false\"\n    aria-label=\"Toggle navigation\"\n  >\n    <span class=\"navbar-toggler-icon\"></span>\n  </button>\n\n  <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">\n    <ul class=\"navbar-nav mr-auto\">\n      <li class=\"nav-item dropdown\">\n        <a\n          class=\"nav-link dropdown-toggle\"\n          href=\"#\"\n          id=\"navbarDropdown\"\n          role=\"button\"\n          data-toggle=\"dropdown\"\n          aria-haspopup=\"true\"\n          aria-expanded=\"false\"\n        >\n          Guides\n        </a>\n        <div class=\"dropdown-menu\" aria-labelledby=\"navbarDropdown\">\n          <a class=\"dropdown-item\" href=\"#/docs/get-started\"\n            >Get Started (GOGS)</a\n          >\n          <div class=\"dropdown-divider\"></div>\n          <a class=\"dropdown-item\" href=\"#/docs/openshift\">OpenShift Setup</a>\n        </div>\n      </li>\n      <li class=\"nav-item\">\n        <a\n          class=\"nav-link\"\n          href=\"https://s3.amazonaws.com/com-comenity-dev/public/hackathon/openshift_cheat_sheet_r3v1.pdf\"\n          target=\"_blank\"\n          >Cheat Sheet</a\n        >\n      </li>\n      <!--\n        <li class=\"nav-item dropdown\">\n          <a\n            class=\"nav-link dropdown-toggle\"\n            href=\"#\"\n            id=\"navbarDropdown\"\n            role=\"button\"\n            data-toggle=\"dropdown\"\n            aria-haspopup=\"true\"\n            aria-expanded=\"false\"\n          >\n            Dropdown\n          </a>\n          <div class=\"dropdown-menu\" aria-labelledby=\"navbarDropdown\">\n            <a class=\"dropdown-item\" href=\"#\">Action</a>\n            <a class=\"dropdown-item\" href=\"#\">Another action</a>\n            <div class=\"dropdown-divider\"></div>\n            <a class=\"dropdown-item\" href=\"#\">Something else here</a>\n          </div>\n        </li>\n        <li class=\"nav-item\">\n          <a class=\"nav-link disabled\" href=\"#\">Disabled</a>\n        </li>\n      -->\n    </ul>\n  </div>\n</nav>\n"
+module.exports = "<nav class=\"navbar fixed-top navbar-expand-lg navbar-light bg-light\">\n  <a class=\"navbar-brand\" href=\"#/\">OpenShift Primer</a>\n  <button\n    class=\"navbar-toggler\"\n    type=\"button\"\n    data-toggle=\"collapse\"\n    data-target=\"#navbarSupportedContent\"\n    aria-controls=\"navbarSupportedContent\"\n    aria-expanded=\"false\"\n    aria-label=\"Toggle navigation\"\n  >\n    <span class=\"navbar-toggler-icon\"></span>\n  </button>\n\n  <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">\n    <ul class=\"navbar-nav mr-auto\">\n      <li class=\"nav-item dropdown\">\n        <a\n          class=\"nav-link dropdown-toggle\"\n          href=\"#\"\n          id=\"navbarDropdown\"\n          role=\"button\"\n          data-toggle=\"dropdown\"\n          aria-haspopup=\"true\"\n          aria-expanded=\"false\"\n        >\n          Guides\n        </a>\n        <div class=\"dropdown-menu\" aria-labelledby=\"navbarDropdown\">\n          <a class=\"dropdown-item\" href=\"#/docs/get-started\"\n            >Get Started (GOGS)</a\n          >\n          <div class=\"dropdown-divider\"></div>\n          <a class=\"dropdown-item\" href=\"#/docs/o365\">Office 365 Setup</a>\n          <a class=\"dropdown-item\" href=\"#/docs/openshift\">OpenShift Setup</a>\n        </div>\n      </li>\n      <li class=\"nav-item\">\n        <a\n          class=\"nav-link\"\n          href=\"https://s3.amazonaws.com/com-comenity-dev/public/hackathon/openshift_cheat_sheet_r3v1.pdf\"\n          target=\"_blank\"\n          >OpenShift Cheat Sheet</a\n        >\n      </li>\n      <!--\n        <li class=\"nav-item dropdown\">\n          <a\n            class=\"nav-link dropdown-toggle\"\n            href=\"#\"\n            id=\"navbarDropdown\"\n            role=\"button\"\n            data-toggle=\"dropdown\"\n            aria-haspopup=\"true\"\n            aria-expanded=\"false\"\n          >\n            Dropdown\n          </a>\n          <div class=\"dropdown-menu\" aria-labelledby=\"navbarDropdown\">\n            <a class=\"dropdown-item\" href=\"#\">Action</a>\n            <a class=\"dropdown-item\" href=\"#\">Another action</a>\n            <div class=\"dropdown-divider\"></div>\n            <a class=\"dropdown-item\" href=\"#\">Something else here</a>\n          </div>\n        </li>\n        <li class=\"nav-item\">\n          <a class=\"nav-link disabled\" href=\"#\">Disabled</a>\n        </li>\n      -->\n    </ul>\n  </div>\n</nav>\n"
 
 /***/ }),
 
@@ -341,6 +350,68 @@ var NavbarComponent = /** @class */ (function () {
         __metadata("design:paramtypes", [])
     ], NavbarComponent);
     return NavbarComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/o365/o365.component.html":
+/*!******************************************!*\
+  !*** ./src/app/o365/o365.component.html ***!
+  \******************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"container\">\n  <h1>Getting started with Office 365 Teams</h1>\n\n  We've prepared a short video showing the steps to get started with Office 365\n  Teams.\n\n  <p></p>\n  Before setting up Teams on your mobile device, be sure you've completed the\n  following steps:\n\n  <p></p>\n  <ul>\n    <li>\n      Check your inbox for your Office 365 tenant setup email sent on 11/02 at\n      about 4pm. The email has the details for access to the test tenant\n    </li>\n    <li>\n      Visit <a href=\"https://www.office.com\">office.com</a> to confirm access to\n      your account\n    </li>\n    <li>\n      Enter <em>firstname.lastname@adshackathon.onmicrosoft.com</em> for your\n      username\n    </li>\n    <li>Enter the temporary password from your setup email (above)</li>\n  </ul>\n\n  When you complete your login, you should arrive at your O365 dashboard,\n  showing the Office Apps.\n\n  <p></p>\n\n  <!-- actual height: 1138 -->\n\n  <iframe\n    src=\"https://player.vimeo.com/video/299518770\"\n    height=\"640\"\n    frameborder=\"0\"\n    webkitallowfullscreen\n    mozallowfullscreen\n    allowfullscreen\n  ></iframe>\n</div>\n"
+
+/***/ }),
+
+/***/ "./src/app/o365/o365.component.scss":
+/*!******************************************!*\
+  !*** ./src/app/o365/o365.component.scss ***!
+  \******************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ""
+
+/***/ }),
+
+/***/ "./src/app/o365/o365.component.ts":
+/*!****************************************!*\
+  !*** ./src/app/o365/o365.component.ts ***!
+  \****************************************/
+/*! exports provided: O365Component */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "O365Component", function() { return O365Component; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var O365Component = /** @class */ (function () {
+    function O365Component() {
+    }
+    O365Component.prototype.ngOnInit = function () { };
+    O365Component = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: "app-o365",
+            template: __webpack_require__(/*! ./o365.component.html */ "./src/app/o365/o365.component.html"),
+            styles: [__webpack_require__(/*! ./o365.component.scss */ "./src/app/o365/o365.component.scss")]
+        }),
+        __metadata("design:paramtypes", [])
+    ], O365Component);
+    return O365Component;
 }());
 
 
