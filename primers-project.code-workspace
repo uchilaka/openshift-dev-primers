@@ -1,0 +1,9 @@
+{
+  "folders": [{
+    "path": "."
+  }],
+  "settings": {
+    "tslint.autoFixOnSave": true,
+    "prettier.tslintIntegration": true,
+  }
+}
