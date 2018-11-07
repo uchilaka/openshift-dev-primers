@@ -1,18 +1,5 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div id="wrapper" [ngClass]="{ 'toggled': sidebarIsOpen }">
-  <!-- Sidebar -->
-  <!-- <app-simple-sidebar></app-simple-sidebar> -->
-  <app-sidebar [isOpen]="sidebarIsOpen"></app-sidebar>
-  <!-- Page Content -->
-  <div id="page-content-wrapper">
-    <div class="container-fluid">
-      <nav class="navbar fixed-top navbar-light bg-light">
-        <a class="navbar-brand btn btn-default" href="#menu-toggle" id="menu-toggle" (click)="toggleSidebar($event)">
-          <fa-icon [icon]="faBars"></fa-icon>
-          <!--&nbsp; Menu-->
-        </a>
-      </nav>
-      <router-outlet></router-outlet>
-    </div>
-  </div>
+<app-navbar></app-navbar>
+<div class="container main">
+  <!-- This is where dynamic content is swapped out -->
+  <router-outlet></router-outlet>
 </div>

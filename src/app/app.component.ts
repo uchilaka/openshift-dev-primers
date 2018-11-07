@@ -1,5 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
+// import "bootstrap/dist/js/bootstrap.min.js";
 
 @Component({
   selector: "app-root",
@@ -9,12 +10,12 @@ import { faBars } from "@fortawesome/free-solid-svg-icons";
 export class AppComponent {
   title = "OpenShift (Dev) Primers";
   faBars = faBars;
-  public sidebarIsOpen: boolean;
+  // public sidebarIsOpen: boolean;
 
-  toggleSidebar($event?: Event) {
-    if ($event) {
-      $event.preventDefault();
-    }
-    this.sidebarIsOpen = !this.sidebarIsOpen;
-  }
+  // toggleSidebar($event?: Event) {
+  //   if ($event) {
+  //     $event.preventDefault();
+  //   }
+  //   this.sidebarIsOpen = !this.sidebarIsOpen;
+  // }
 }

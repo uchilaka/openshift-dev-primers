@@ -14,11 +14,12 @@ import { FontAwesomeModule } from "@fortawesome/angular-fontawesome";
 
 import { ROUTES } from "./app.routing";
 import { SidebarComponent } from "./sidebar/sidebar.component";
-import { LearnOpenshiftComponent } from './learn-openshift/learn-openshift.component';
-import { SimpleSidebarComponent } from './simple-sidebar/simple-sidebar.component';
+import { LearnOpenshiftComponent } from "./learn-openshift/learn-openshift.component";
+import { SimpleSidebarComponent } from "./simple-sidebar/simple-sidebar.component";
+import { NavbarComponent } from "./navbar/navbar.component";
 
 @NgModule({
-  declarations: [AppComponent, GettingStartedComponent, SidebarComponent, LearnOpenshiftComponent, SimpleSidebarComponent],
+  declarations: [AppComponent, GettingStartedComponent, SidebarComponent, LearnOpenshiftComponent, SimpleSidebarComponent, NavbarComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,

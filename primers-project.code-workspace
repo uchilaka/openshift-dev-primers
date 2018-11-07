@@ -1,9 +1,12 @@
 {
-  "folders": [{
-    "path": "."
-  }],
+  "folders": [
+    {
+      "path": "."
+    }
+  ],
   "settings": {
     "tslint.autoFixOnSave": true,
     "prettier.tslintIntegration": true,
+    "editor.wordWrap": "on"
   }
 }
