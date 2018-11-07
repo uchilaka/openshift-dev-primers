@@ -19,6 +19,7 @@ import { NavbarComponent } from "./navbar/navbar.component";
 import { SourceControlComponent } from "./source-control/source-control.component";
 import { OpenshiftComponent } from "./openshift/openshift.component";
 import { OtherToolsComponent } from "./other-tools/other-tools.component";
+import { O365Component } from './o365/o365.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { OtherToolsComponent } from "./other-tools/other-tools.component";
     NavbarComponent,
     SourceControlComponent,
     OpenshiftComponent,
-    OtherToolsComponent
+    OtherToolsComponent,
+    O365Component
   ],
   imports: [
     BrowserModule,
