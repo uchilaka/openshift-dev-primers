@@ -1,0 +1,25 @@
+@import "~bootstrap/dist/css/bootstrap.min.css";
+/* @import "~@angular/material/prebuilt-themes/indigo-pink.css"; */
+/* @import "assets/css/simple-sidebar.css"; */
+
+/* You can add global styles to this file, and also import other style files */
+body {
+  /*font-family: "Segoe WPC", "Segoe UI", "SFUIText-Light", "HelveticaNeue-Light", sans-serif, "Droid Sans Fallback";*/
+  font-family: 'Roboto', sans-serif;
+  /* font-size: 14px;
+  padding: 0 26px;
+  line-height: 22px;
+  word-wrap: break-word; */
+}
+
+.container-fluid {
+  padding-top: 3em;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+img {
+  max-width: 80% !important;
+  margin: 0 auto;
+  display: block;
+}

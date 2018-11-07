@@ -1,8 +1,0 @@
-{
-  "html": {
-    "end_with_newline": true
-  },
-  "js": {
-    "preserve-newlines": true
-  }
-}
