@@ -539,7 +539,7 @@ if(false) {}
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /mnt/d/Developer/openshift-primers-ng/src/scss/styles.scss */"./src/scss/styles.scss");
+module.exports = __webpack_require__(/*! /Users/a664743/Developer/openshift-dev-primers/src/scss/styles.scss */"./src/scss/styles.scss");
 
 
 /***/ })

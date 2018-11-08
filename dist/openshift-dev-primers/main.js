@@ -807,7 +807,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /mnt/d/Developer/openshift-primers-ng/src/main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! /Users/a664743/Developer/openshift-dev-primers/src/main.ts */"./src/main.ts");
 
 
 /***/ })
