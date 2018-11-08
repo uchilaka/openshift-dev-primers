@@ -118,12 +118,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _openshift_openshift_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./openshift/openshift.component */ "./src/app/openshift/openshift.component.ts");
 /* harmony import */ var _other_tools_other_tools_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./other-tools/other-tools.component */ "./src/app/other-tools/other-tools.component.ts");
 /* harmony import */ var _o365_o365_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./o365/o365.component */ "./src/app/o365/o365.component.ts");
+/* harmony import */ var _examples_examples_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./examples/examples.component */ "./src/app/examples/examples.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -154,7 +156,8 @@ var AppModule = /** @class */ (function () {
                 _source_control_source_control_component__WEBPACK_IMPORTED_MODULE_12__["SourceControlComponent"],
                 _openshift_openshift_component__WEBPACK_IMPORTED_MODULE_13__["OpenshiftComponent"],
                 _other_tools_other_tools_component__WEBPACK_IMPORTED_MODULE_14__["OtherToolsComponent"],
-                _o365_o365_component__WEBPACK_IMPORTED_MODULE_15__["O365Component"]
+                _o365_o365_component__WEBPACK_IMPORTED_MODULE_15__["O365Component"],
+                _examples_examples_component__WEBPACK_IMPORTED_MODULE_16__["ExamplesComponent"]
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
@@ -190,11 +193,30 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _source_control_source_control_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./source-control/source-control.component */ "./src/app/source-control/source-control.component.ts");
 /* harmony import */ var _openshift_openshift_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./openshift/openshift.component */ "./src/app/openshift/openshift.component.ts");
 /* harmony import */ var _o365_o365_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./o365/o365.component */ "./src/app/o365/o365.component.ts");
+/* harmony import */ var _examples_examples_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./examples/examples.component */ "./src/app/examples/examples.component.ts");
+
 
 
 
 
 var ROUTES = [
+    {
+        path: "examples",
+        children: [
+            {
+                path: "source-code",
+                component: _examples_examples_component__WEBPACK_IMPORTED_MODULE_4__["ExamplesComponent"]
+            },
+            {
+                path: "videos",
+                component: _examples_examples_component__WEBPACK_IMPORTED_MODULE_4__["ExamplesComponent"]
+            },
+            {
+                path: "**",
+                redirectTo: "/examples/videos"
+            }
+        ]
+    },
     {
         path: "docs",
         children: [
@@ -226,6 +248,69 @@ var ROUTES = [
         redirectTo: "/docs/gogs"
     }
 ];
+
+
+/***/ }),
+
+/***/ "./src/app/examples/examples.component.html":
+/*!**************************************************!*\
+  !*** ./src/app/examples/examples.component.html ***!
+  \**************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"container\">\n  <!--\n    <h2>Source Code</h2>\n    <hr />\n    <h2>Videos</h2>\n    A few videos to help with using the Azure Managed OpenShift environment\n  -->\n\n  <p></p>\n  <h3>The Dashboard</h3>\n  <div>\n    Get a preview of the OpenShift dashboard, and creating a new project.\n  </div>\n\n  <!-- With Privacy Enhanced Mode -->\n  <!--\n    <iframe\n      width=\"560\"\n      height=\"315\"\n      src=\"https://www.youtube-nocookie.com/embed/bkCdpF3MtLI\"\n      frameborder=\"0\"\n      allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\"\n      allowfullscreen\n    ></iframe>\n  -->\n\n  <iframe\n    width=\"560\"\n    height=\"315\"\n    src=\"https://www.youtube.com/embed/bkCdpF3MtLI\"\n    frameborder=\"0\"\n    allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\"\n    allowfullscreen\n  ></iframe>\n\n  <hr />\n  <h3>Setting up a NodeJS app</h3>\n\n  <div>\n    A guide showing the setup of a customized NodeJS application. Take a moment\n    to check out the source code:\n    <a\n      href=\"http://gogs-demo.40.76.6.47.nip.io/uchilaka/trivial-nodejs-mongodb.git\"\n      target=\"_blank\"\n      >http://gogs-demo.40.76.6.47.nip.io/uchilaka/trivial-nodejs-mongodb.git</a\n    >\n  </div>\n\n  <!--\n    <iframe\n      width=\"560\"\n      height=\"315\"\n      src=\"https://www.youtube.com/embed/zqqUESqaX0E\"\n      frameborder=\"0\"\n      allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\"\n      allowfullscreen\n    ></iframe>\n  -->\n\n  <iframe\n    src=\"https://player.vimeo.com/video/299651093\"\n    width=\"640\"\n    height=\"400\"\n    frameborder=\"0\"\n    webkitallowfullscreen\n    mozallowfullscreen\n    allowfullscreen\n  ></iframe>\n</div>\n"
+
+/***/ }),
+
+/***/ "./src/app/examples/examples.component.scss":
+/*!**************************************************!*\
+  !*** ./src/app/examples/examples.component.scss ***!
+  \**************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ""
+
+/***/ }),
+
+/***/ "./src/app/examples/examples.component.ts":
+/*!************************************************!*\
+  !*** ./src/app/examples/examples.component.ts ***!
+  \************************************************/
+/*! exports provided: ExamplesComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ExamplesComponent", function() { return ExamplesComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var ExamplesComponent = /** @class */ (function () {
+    function ExamplesComponent() {
+    }
+    ExamplesComponent.prototype.ngOnInit = function () {
+    };
+    ExamplesComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-examples',
+            template: __webpack_require__(/*! ./examples.component.html */ "./src/app/examples/examples.component.html"),
+            styles: [__webpack_require__(/*! ./examples.component.scss */ "./src/app/examples/examples.component.scss")]
+        }),
+        __metadata("design:paramtypes", [])
+    ], ExamplesComponent);
+    return ExamplesComponent;
+}());
+
 
 
 /***/ }),
@@ -311,7 +396,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<nav class=\"navbar fixed-top navbar-expand-lg navbar-light bg-light\">\n  <a class=\"navbar-brand\" href=\"#/\">OpenShift Primer</a>\n  <button\n    class=\"navbar-toggler\"\n    type=\"button\"\n    data-toggle=\"collapse\"\n    data-target=\"#navbarSupportedContent\"\n    aria-controls=\"navbarSupportedContent\"\n    aria-expanded=\"false\"\n    aria-label=\"Toggle navigation\"\n  >\n    <span class=\"navbar-toggler-icon\"></span>\n  </button>\n\n  <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">\n    <ul class=\"navbar-nav mr-auto\">\n      <li class=\"nav-item dropdown\">\n        <a\n          class=\"nav-link dropdown-toggle\"\n          href=\"#\"\n          id=\"navbarDropdown\"\n          role=\"button\"\n          data-toggle=\"dropdown\"\n          aria-haspopup=\"true\"\n          aria-expanded=\"false\"\n        >\n          Guides\n        </a>\n        <div class=\"dropdown-menu\" aria-labelledby=\"navbarDropdown\">\n          <a class=\"dropdown-item\" href=\"#/docs/get-started\"\n            >Get Started (GOGS)</a\n          >\n          <div class=\"dropdown-divider\"></div>\n          <a class=\"dropdown-item\" href=\"#/docs/o365\">Office 365 Setup</a>\n          <a class=\"dropdown-item\" href=\"#/docs/openshift\">OpenShift Setup</a>\n        </div>\n      </li>\n      <li class=\"nav-item\">\n        <a\n          class=\"nav-link\"\n          href=\"https://s3.amazonaws.com/com-comenity-dev/public/hackathon/openshift_cheat_sheet_r3v1.pdf\"\n          target=\"_blank\"\n          >OpenShift Cheat Sheet</a\n        >\n      </li>\n      <!--\n        <li class=\"nav-item dropdown\">\n          <a\n            class=\"nav-link dropdown-toggle\"\n            href=\"#\"\n            id=\"navbarDropdown\"\n            role=\"button\"\n            data-toggle=\"dropdown\"\n            aria-haspopup=\"true\"\n            aria-expanded=\"false\"\n          >\n            Dropdown\n          </a>\n          <div class=\"dropdown-menu\" aria-labelledby=\"navbarDropdown\">\n            <a class=\"dropdown-item\" href=\"#\">Action</a>\n            <a class=\"dropdown-item\" href=\"#\">Another action</a>\n            <div class=\"dropdown-divider\"></div>\n            <a class=\"dropdown-item\" href=\"#\">Something else here</a>\n          </div>\n        </li>\n        <li class=\"nav-item\">\n          <a class=\"nav-link disabled\" href=\"#\">Disabled</a>\n        </li>\n      -->\n    </ul>\n  </div>\n</nav>\n"
+module.exports = "<nav class=\"navbar fixed-top navbar-expand-lg navbar-light bg-light\">\n  <a class=\"navbar-brand\" href=\"#/\">OpenShift Primer</a>\n  <button\n    class=\"navbar-toggler\"\n    type=\"button\"\n    data-toggle=\"collapse\"\n    data-target=\"#navbarSupportedContent\"\n    aria-controls=\"navbarSupportedContent\"\n    aria-expanded=\"false\"\n    aria-label=\"Toggle navigation\"\n  >\n    <span class=\"navbar-toggler-icon\"></span>\n  </button>\n\n  <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">\n    <ul class=\"navbar-nav mr-auto\">\n      <li class=\"nav-item dropdown\">\n        <a\n          class=\"nav-link dropdown-toggle\"\n          href=\"#\"\n          id=\"navbarDropdown\"\n          role=\"button\"\n          data-toggle=\"dropdown\"\n          aria-haspopup=\"true\"\n          aria-expanded=\"false\"\n        >\n          Guides\n        </a>\n        <div class=\"dropdown-menu\" aria-labelledby=\"navbarDropdown\">\n          <a class=\"dropdown-item\" href=\"#/docs/get-started\"\n            >Get Started (GOGS)</a\n          >\n          <div class=\"dropdown-divider\"></div>\n          <a class=\"dropdown-item\" href=\"#/docs/o365\">Office 365 Setup</a>\n          <a class=\"dropdown-item\" href=\"#/docs/openshift\">OpenShift Setup</a>\n          <a class=\"dropdown-item\" href=\"#/examples\">OpenShift Examples</a>\n        </div>\n      </li>\n      <li class=\"nav-item\">\n        <a\n          class=\"nav-link\"\n          href=\"https://s3.amazonaws.com/com-comenity-dev/public/hackathon/openshift_cheat_sheet_r3v1.pdf\"\n          target=\"_blank\"\n          >OpenShift Cheat Sheet</a\n        >\n      </li>\n      <!--\n        <li class=\"nav-item dropdown\">\n          <a\n            class=\"nav-link dropdown-toggle\"\n            href=\"#\"\n            id=\"navbarDropdown\"\n            role=\"button\"\n            data-toggle=\"dropdown\"\n            aria-haspopup=\"true\"\n            aria-expanded=\"false\"\n          >\n            Dropdown\n          </a>\n          <div class=\"dropdown-menu\" aria-labelledby=\"navbarDropdown\">\n            <a class=\"dropdown-item\" href=\"#\">Action</a>\n            <a class=\"dropdown-item\" href=\"#\">Another action</a>\n            <div class=\"dropdown-divider\"></div>\n            <a class=\"dropdown-item\" href=\"#\">Something else here</a>\n          </div>\n        </li>\n        <li class=\"nav-item\">\n          <a class=\"nav-link disabled\" href=\"#\">Disabled</a>\n        </li>\n      -->\n    </ul>\n  </div>\n</nav>\n"
 
 /***/ }),
 

@@ -20,6 +20,7 @@ import { SourceControlComponent } from "./source-control/source-control.componen
 import { OpenshiftComponent } from "./openshift/openshift.component";
 import { OtherToolsComponent } from "./other-tools/other-tools.component";
 import { O365Component } from './o365/o365.component';
+import { ExamplesComponent } from './examples/examples.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { O365Component } from './o365/o365.component';
     SourceControlComponent,
     OpenshiftComponent,
     OtherToolsComponent,
-    O365Component
+    O365Component,
+    ExamplesComponent
   ],
   imports: [
     BrowserModule,
